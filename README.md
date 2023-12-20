@@ -1,4 +1,6 @@
 # Academy_rivals
 
+## initialisation ##
+npm install
+
 ## Lancer node ##
-node index.js
