@@ -1,0 +1,40 @@
+﻿Site Academy Rivals
+
+
+
+
+Objectif : 
+
+    • Centraliser les informations relative aux evenements/(à l’asso ?) sur le site (Réseaux sociaux, diffusions, rediffusions, plannings, bracket, inscriptions)
+
+Inspirations :
+
+    • Site Gotaga
+    • Site Decimus
+    • Site MaximusCup
+
+
+Pages intérieures :
+
+    • Page d’accueil
+        ◦ Réseaux sociaux
+        ◦ Résumé de l’évenement / slogan / catchphrase
+        ◦ Lorsque stream actif → Diffusion du stream sur la page et contenu en dessous
+
+    • Page planning
+        ◦ Format planning LoL Esport ou Visuel planning event
+
+    • Page Bracket 
+        ◦ Bracket Toornament
+
+    • Page VOD/Rediffs
+
+    • Page Partenaires
+        ◦ Logos entreprises / PP influenceurs
+        ◦ Liens sites des partenaires
+        ◦ Réseaux sociaux influenceurs (?)
+
+    • Page Inscriptions (Bouton inscription dans le header du site en gros)
+        ◦ Connexion et profil avec Toornament 
+
+
