@@ -1,0 +1,33 @@
+<!-- home.ejs (ou toute autre page ejs) -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titre de la page</title>
+    <link rel="stylesheet" href="/styles/styles.css"> <!-- Lien vers votre fichier CSS -->
+</head>
+<body>
+    <%- include('partials/header') %> <!-- Inclure le header -->
+    
+    <h1>Contenu de la page d'accueil</h1>
+
+    <div id="twitch-embed"></div>
+
+    <!-- Load the Twitch embed JavaScript file -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    
+    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
+    <script type="text/javascript">
+        new Twitch.Embed("twitch-embed", {
+        width: 1280,
+        height: 720,
+        channel: "caedrel",
+        // Only needed if this page is going to be embedded on other websites
+        parent: ["localhost"]
+        });
+    </script>
+    
+    <%- include('partials/footer') %> <!-- Inclure le footer -->
+</body>
+</html>

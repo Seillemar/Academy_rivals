@@ -1,0 +1,75 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles pour le header */
+header, footer {
+    background-color: #333; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    padding: 10px 20px; /* Espacement intérieur */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px; /* Taille de l'image */
+    height: auto; /* Hauteur automatique pour conserver les proportions */
+}
+
+nav{
+    width: 75%; /* Largeur du menu */
+}
+
+footer ul {
+    width: 85%; /* Largeur du menu footer */
+}
+
+nav ul , footer ul{
+    list-style-type: none; /* Pas de puces */
+    display: flex;
+}
+
+nav ul li, footer ul li{
+    margin-right: 20px; /* Espacement entre les éléments */
+}
+
+nav ul li a, footer ul li a{
+    text-decoration: none; /* Pas de soulignement */
+    color: #fff; /* Couleur du texte */
+    font-weight: bold; /* Texte en gras */
+}
+
+/* Styles pour le bouton d'inscription */
+.inscription button {
+    background-color: #fff; /* Couleur de fond */
+    color: #333; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    padding: 10px 20px; /* Espacement intérieur */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointer */
+}
+
+.inscription button:hover {
+    background-color: #eee; /* Couleur de fond au survol */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Pour assurer que le contenu s'étend sur toute la hauteur de la vue */
+    margin: 0; /* Supprimer les marges par défaut du corps */
+}
+
+.content {
+    flex: 1; /* Faites en sorte que le contenu occupe tout l'espace disponible */
+    /* Styles pour le contenu de la page */
+}
+
+footer {
+    /* Styles pour votre pied de page */
+    margin-top: auto; /* Placez le pied de page tout en bas de la page */
+}

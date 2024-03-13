@@ -1,0 +1,19 @@
+<!-- vods.ejs (ou toute autre page ejs) -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titre de la page</title>
+    <link rel="stylesheet" href="/styles/styles.css"> <!-- Lien vers votre fichier CSS -->
+</head>
+<body>
+    <%- include('partials/header') %> <!-- Inclure le header -->
+    
+    <h1>Contenu de la page VODs</h1>
+
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/videoseries?si=c-lCjdeF9Sawmxmq&amp;list=PLptO68DjuPA8-D6poX-fdkEqZgmLvjLOX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    
+    <%- include('partials/footer') %> <!-- Inclure le footer -->
+</body>
+</html>
