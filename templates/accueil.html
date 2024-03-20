@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Academy Rivals - Accueil</title>
+	<link rel="stylesheet" type="text/css" href="../assets/style/accueil.css">
+</head>
+<body>
+	<iframe src="header.html" width="100%" frameborder="0"></iframe>
+	
+	<script type="text/javascript">
+					
+		const channelName = 'AcademyRivals';
+
+		function embedTwitchIframe(channel) {
+  			new Twitch.Embed("twitch-embed", {
+    			width: 854,
+    			height: 480,
+       	 		channel: channel,
+				layout: "video",
+			});
+		}
+	</script>
+				
+	<iframe src="footer.html" width="100%" frameborder="0"></iframe>	
+
+</body>
+</html>
