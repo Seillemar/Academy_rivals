@@ -9,14 +9,16 @@
 header, footer {
     background-color: #000; /* Couleur de fond */
     color: #fff; /* Couleur du texte */
-    padding: 10px 20px; /* Espacement intérieur */
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 30px;
-    height: 150px;
     font-family: "Anton", sans-serif;
     font-style: normal;
+}
+
+header{
+    padding: 10px 20px; /* Espacement intérieur */
 }
 
 .staff{
@@ -44,6 +46,7 @@ video{
 
 header{
     text-transform: uppercase!important;
+    height: 150px;
 }
 
 .logo{
@@ -63,17 +66,32 @@ nav{
     width: 60%; /* Largeur du menu */
 }
 
-footer ul {
-    width: 85%; /* Largeur du menu footer */
-}
 
 nav ul , footer ul{
     list-style-type: none; /* Pas de puces */
     display: flex;
 }
 
-nav ul li, footer ul li{
+nav ul li{
     margin-right: 20px; /* Espacement entre les éléments */
+}
+
+footer ul li{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: #41e8d2;
+    border-style: solid;
+    border-width: 0px 0px 0px 2px;
+}
+
+footer ul li:first-child{
+    border: none;
+}
+
+footer ul{
+    width: 50%;
+    justify-content: space-around;
 }
 
 nav ul li a, footer ul li a{
@@ -135,6 +153,10 @@ body {
     font-family: "Actor", sans-serif;
     font-weight: 400;
     font-style: normal;      
+}
+
+.presentation p{
+    font-size: 20px;
 }
 
 .inscription{
@@ -200,7 +222,62 @@ body {
     color: #000;
 }
 
+.competition{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    font-family: "Actor", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    margin-bottom: 100px;
+}
+
+.competition h2{
+    margin-bottom: 20px;
+}
+
+.competition p{
+    font-size: 25px;
+}
+
+.compteur{
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    font-size: 50px;
+    margin-top: 50px;
+}
+
+footer h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.contactez-nous a{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    background-color: #41e8d2;
+    padding: 10px 20px;
+}
+
 footer {
     /* Styles pour votre pied de page */
     margin-top: auto; /* Placez le pied de page tout en bas de la page */
+}
+
+.nav-footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
+
+.footer-logo{
+    height: 233px;
 }
