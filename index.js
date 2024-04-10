@@ -2,6 +2,7 @@ const express = require('express');
 const axios = require('axios');
 const app = express();
 const path = require('path');
+const nodemailer = require('nodemailer');
 
 const port = 3000;
 
@@ -36,6 +37,33 @@ app.get('/staff', (req, res) => {
 // Route for the contact page
 app.get('/contact', (req, res) => {
     res.render('contact');
+});
+
+app.use(express.urlencoded({ extended: true })); // pour parser les données du formulaire
+
+app.post('/send-email', (req, res) => {
+    let transporter = nodemailer.createTransport({
+        sendmail: true,
+        newline: 'unix',
+        path: '/usr/sbin/sendmail'
+    });
+
+    let mailOptions = {
+        from: req.body.email, // l'adresse e-mail de l'expéditeur sera celle fournie dans le formulaire
+        to: 'braguettefield@gmail.com',
+        subject: req.body.subject, // l'objet de l'e-mail sera celui fourni dans le formulaire
+        text: `Message de ${req.body.firstName} ${req.body.lastName}: ${req.body.message}` // le corps de l'e-mail contiendra le message du formulaire
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.log(error);
+            res.send('error'); // vous pouvez gérer les erreurs comme vous le souhaitez
+        } else {
+            console.log('Email envoyé: ' + info.response);
+            res.send('success'); // vous pouvez gérer les succès comme vous le souhaitez
+        }
+    });
 });
 
 // Start the server
