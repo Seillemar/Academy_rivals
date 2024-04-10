@@ -278,6 +278,8 @@ footer {
     width: 50%;
 }
 
+/* Styles pour la page de contact */
+
 .footer-logo{
     height: 233px;
 }
@@ -380,4 +382,61 @@ input[type="submit"]{
 
 input[type="submit"]:hover {
     background-color: #0056b3; /* Darker blue on hover. */
+}
+
+/* Styles pour la page de staff */
+
+.icon_staff_1 {
+    margin-top: 5%;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    border: white inset;
+    height: 50vh;
+}
+
+.icon_staff_2 {
+    margin-top: 5%;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    border: white inset;
+    height: 50vh;
+}
+
+.img {
+    width: 50vw;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+}
+
+.profil {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    border: solid;
+    background: url(../images/logo.webp) center;
+    width: 20vw;
+}
+
+.text {
+    width: 50vw;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font-family: "Anton", sans-serif;
+}
+
+.text > p {
+    font-size: 150%;
+}
+
+.name {
+    margin-top: 20%;
+    color: aqua;
+}
+
+.pro {
+    color: white;
 }
