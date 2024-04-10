@@ -1,32 +1,47 @@
 <!-- home.ejs (ou toute autre page ejs) -->
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titre de la page</title>
-    <link rel="stylesheet" href="/styles/styles.css"> <!-- Lien vers votre fichier CSS -->
-</head>
+<%- include('partials/head') %> <!-- Inclure le header -->
+
 <body>
     <%- include('partials/header') %> <!-- Inclure le header -->
     
-    <h1>Contenu de la page d'accueil</h1>
+    <h1>Academy Rivals</h1>
+    <div class="video">
+        <video autoplay="true" loop="true">
+            <source src="/video/academy_rivals.mov" type="video/mp4">
+            Votre navigateur ne supporte pas les vidéos HTML5.
+        </video>
+    </div>
 
-    <div id="twitch-embed"></div>
+    <div class="content">
+        <div class="content-gauche">
+            <h2>Academy Rivals, c'est quoi ?</h2>
+            <div class="presentation">
+                <p>Explorez l'univers de l’E-Sport avec AcademyRivals, une communauté qui anime les passions à travers des compétitions intenses sur League of Legends ! Notre but ? Créer un environnement où la compétition va de paire avec la convivialité, où chaque interaction lors d’une partie est une occasion de progression et d'accomplissement. Rejoignez nous pour vivre des expériences mémorables, relever des défis et savourer la satisfaction de la victoire. </p>
+            </div>
+        </div>
+        <div class="content-droite">
+            <img src="/images/logo2.webp" alt="Logo">
+        </div>
+    </div>
 
-    <!-- Load the Twitch embed JavaScript file -->
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
-    
-    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
-    <script type="text/javascript">
-        new Twitch.Embed("twitch-embed", {
-        width: 1280,
-        height: 720,
-        channel: "caedrel",
-        // Only needed if this page is going to be embedded on other websites
-        parent: ["localhost"]
-        });
-    </script>
+    <div class="inscription">
+        <div class="bouton-inscription">
+            <a href="#">Pour vous inscrire c'est par ici !</a>
+        </div>
+    </div>
+
+    <div class="boutons">
+        <div class="bouton-1">
+            <a href="#">Twitch</a>
+        </div>
+        <div class="bouton-2">
+            <a href="#">Staff</a>
+        </div>
+        <div class="bouton-3">
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
     
     <%- include('partials/footer') %> <!-- Inclure le footer -->
 </body>

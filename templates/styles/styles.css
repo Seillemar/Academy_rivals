@@ -7,21 +7,60 @@
 
 /* Styles pour le header */
 header, footer {
-    background-color: #333; /* Couleur de fond */
+    background-color: #000; /* Couleur de fond */
     color: #fff; /* Couleur du texte */
     padding: 10px 20px; /* Espacement intérieur */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 30px;
+    height: 150px;
+    font-family: "Anton", sans-serif;
+    font-style: normal;
+}
+
+.staff{
+    border: #41e8d2;
+    border-style: solid;
+    border-width: 0px 2px;
+    padding: 0px 20px;
+}
+
+h1{
+    display: none;
+}
+
+h2{
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: "Anton", sans-serif;
+    font-style: normal;
+}
+
+video{
+    width: 100vw;
+    height: auto;
+}
+
+header{
+    text-transform: uppercase!important;
+}
+
+.logo{
+    width: 20%;
+}
+
+.logo2{
+    width: 100%;
 }
 
 .logo img {
-    width: 50px; /* Taille de l'image */
+    width: 159px; /* Taille de l'image */
     height: auto; /* Hauteur automatique pour conserver les proportions */
 }
 
 nav{
-    width: 75%; /* Largeur du menu */
+    width: 60%; /* Largeur du menu */
 }
 
 footer ul {
@@ -40,21 +79,7 @@ nav ul li, footer ul li{
 nav ul li a, footer ul li a{
     text-decoration: none; /* Pas de soulignement */
     color: #fff; /* Couleur du texte */
-    font-weight: bold; /* Texte en gras */
-}
-
-/* Styles pour le bouton d'inscription */
-.inscription button {
-    background-color: #fff; /* Couleur de fond */
-    color: #333; /* Couleur du texte */
-    border: none; /* Pas de bordure */
-    padding: 10px 20px; /* Espacement intérieur */
-    border-radius: 5px; /* Coins arrondis */
-    cursor: pointer; /* Curseur pointer */
-}
-
-.inscription button:hover {
-    background-color: #eee; /* Couleur de fond au survol */
+    font-weight: lighter;
 }
 
 body {
@@ -62,11 +87,117 @@ body {
     flex-direction: column;
     min-height: 100vh; /* Pour assurer que le contenu s'étend sur toute la hauteur de la vue */
     margin: 0; /* Supprimer les marges par défaut du corps */
+    background-color: #000;
 }
 
 .content {
-    flex: 1; /* Faites en sorte que le contenu occupe tout l'espace disponible */
-    /* Styles pour le contenu de la page */
+    display: flex;
+    flex-direction: row;
+    margin: 100px;
+}
+
+.content-gauche {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 82%;
+    background-color: #fff;
+    padding: 30px 50px 50px 50px;
+}
+
+.content-droite {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 18%;
+    background-color: #41e8d2;
+}
+
+.content-droite img{
+    object-position: 100px 60px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.presentation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 25px;
+    padding: 60px;
+    border: #000;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Actor", sans-serif;
+    font-weight: 400;
+    font-style: normal;      
+}
+
+.inscription{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border: #000;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;      
+}
+
+.bouton-inscription{
+    display: flex;
+    background-color: #fff;
+    width: 48%;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    padding: 50px 0px;
+    border: #41e8d2;
+    border-style: solid;
+    border-width: 0px 0px 40px 0px;
+}
+
+.bouton-inscription a{
+    text-decoration: none;
+    color: #000;
+}
+
+.boutons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;  
+}
+
+.bouton-1, .bouton-2, .bouton-3{
+    display: flex;
+    background-color: #fff;
+    width: 15%;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    padding: 50px 0px;
+    border: #41e8d2;
+    border-style: solid;
+    border-width: 0px 0px 40px 0px;
+    text-transform: uppercase;
+    margin: 20px;
+}
+
+.bouton-1 a, .bouton-2 a, .bouton-3 a{
+    text-decoration: none;
+    color: #000;
 }
 
 footer {
