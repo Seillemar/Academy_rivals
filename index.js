@@ -24,19 +24,19 @@ app.use((req, res, next) => {
     next();
 });
 
-app.get('/home', (req, res) => {
-    res.render('home');
+app.get('/', (req, res) => {
+    res.render('home', { title: 'Accueil' });
 });
 
 
 // Route for the staff page
 app.get('/staff', (req, res) => {
-    res.render('staff');
+    res.render('staff', { title: 'Staff' });
 });
 
 // Route for the contact page
 app.get('/contact', (req, res) => {
-    res.render('contact');
+    res.render('contact', { title: 'Contact' });
 });
 
 app.use(express.urlencoded({ extended: true })); // pour parser les données du formulaire
