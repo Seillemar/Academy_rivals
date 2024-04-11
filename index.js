@@ -25,18 +25,28 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-    res.render('home', { title: 'Accueil' });
+    res.render('home', { title: 'Academy Rivals - Accueil' });
 });
 
 
 // Route for the staff page
 app.get('/staff', (req, res) => {
-    res.render('staff', { title: 'Staff' });
+    res.render('staff', { title: 'Academy Rivals - Staff' });
 });
 
 // Route for the contact page
 app.get('/contact', (req, res) => {
-    res.render('contact', { title: 'Contact' });
+    res.render('contact', { title: 'Academy Rivals - Contact' });
+});
+
+// Route for the twitch page
+app.get('/live', (req, res) => {
+    res.render('twitch', { title: 'Academy Rivals - Live' });
+});
+
+// Route for the contact page
+app.get('/vods', (req, res) => {
+    res.render('vods', { title: 'Academy Rivals - VODs' });
 });
 
 app.use(express.urlencoded({ extended: true })); // pour parser les données du formulaire

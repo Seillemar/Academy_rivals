@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-align: center;
 }
 
 /* Styles pour le header */
@@ -18,14 +19,24 @@ header, footer {
 }
 
 header{
-    padding: 10px 20px; /* Espacement intérieur */
+    padding: 10px 20px 10px 0px;
 }
 
-.staff{
+header ul li{
+    display: flex;
+    justify-content: center;
     border: #41e8d2;
     border-style: solid;
-    border-width: 0px 2px;
-    padding: 0px 20px;
+    border-width: 0px 0px 0px 2px;
+    padding-left: 20px;
+}
+
+header ul li:first-child{
+    border: none;
+}
+
+header ul li a.active {
+    color: #41e8d2; /* Changez cette couleur en fonction de vos besoins */
 }
 
 h1{
@@ -49,10 +60,6 @@ header{
     height: 150px;
 }
 
-.logo{
-    width: 20%;
-}
-
 .logo2{
     width: 100%;
 }
@@ -62,8 +69,16 @@ header{
     height: auto; /* Hauteur automatique pour conserver les proportions */
 }
 
+.logo, .logo-vide {
+    width: 159px; /* Taille de l'image */
+    height: auto; /* Hauteur automatique pour conserver les proportions */
+}
+
 nav{
-    width: 58.7%; /* Largeur du menu */
+    width: 100%; /* Largeur du menu */
+    display: flex; /* Affichage en ligne des éléments */
+    justify-content: center; /* Centrage des éléments */
+    align-items: center; /* Centrage des éléments */
 }
 
 
@@ -105,7 +120,7 @@ body {
     flex-direction: column;
     min-height: 100vh; /* Pour assurer que le contenu s'étend sur toute la hauteur de la vue */
     margin: 0; /* Supprimer les marges par défaut du corps */
-    background-color: #000;
+    background-color: #000; /* Couleur de fond */
 }
 
 .content {
@@ -121,6 +136,7 @@ body {
     width: 82%;
     background-color: #fff;
     padding: 30px 50px 50px 50px;
+    text-align: center
 }
 
 .content-droite {
@@ -128,7 +144,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 18%;
     background-color: #41e8d2;
 }
 
@@ -157,6 +172,8 @@ body {
 
 .presentation p{
     font-size: 20px;
+    text-align: justify;
+    line-height: 25px;
 }
 
 .inscription{
@@ -165,8 +182,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
-    border: #000;
-    border-style: solid;
     border-width: 1px;
     font-family: "Anton", sans-serif;
     font-weight: 400;
@@ -176,7 +191,7 @@ body {
 .bouton-inscription{
     display: flex;
     background-color: #fff;
-    width: 48%;
+    width: 750px;
     justify-content: center;
     align-items: center;
     font-size: 50px;
@@ -184,6 +199,7 @@ body {
     border: #41e8d2;
     border-style: solid;
     border-width: 0px 0px 40px 0px;
+    text-align: center;
 }
 
 .bouton-inscription a{
@@ -200,12 +216,13 @@ body {
     font-family: "Anton", sans-serif;
     font-weight: 400;
     font-style: normal;  
+    flex-wrap: wrap;
 }
 
 .bouton-1, .bouton-2, .bouton-3{
     display: flex;
     background-color: #fff;
-    width: 15%;
+    width: 223px;
     justify-content: center;
     align-items: center;
     font-size: 50px;
@@ -238,10 +255,13 @@ body {
 
 .competition h2{
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .competition p{
     font-size: 25px;
+    width: 75%;
+    text-align: center;
 }
 
 .compteur{
@@ -251,6 +271,7 @@ body {
     color: #fff;
     font-size: 50px;
     margin-top: 50px;
+    text-align: center;
 }
 
 footer h3{
@@ -264,6 +285,10 @@ footer h3{
     font-size: 20px;
     background-color: #41e8d2;
     padding: 10px 20px;
+}
+
+.contactez-nous{
+    text-align: center;
 }
 
 footer {
@@ -282,6 +307,9 @@ footer {
 
 .footer-logo{
     height: 233px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
 }
 
 .title-contact{
@@ -397,7 +425,6 @@ input[type="submit"]:hover {
     font-weight: 400;
     font-style: normal;
     color: #41e8d2;
-    margin-top: 100px;
 }
 
 .equipe{
@@ -460,7 +487,7 @@ input[type="submit"]:hover {
     font-weight: 400;
     font-style: normal;
     color: #fff;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
     background-image: url("/images/background-cards.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -487,4 +514,261 @@ input[type="submit"]:hover {
     background-color: #41e8d2;
     height: 175px;
     border-radius: 200px 0px 200px 0px;
+}
+
+#twitch-embed{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.youtube{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Responsive Header */
+.burger-menu {
+    display: none;
+}
+
+.burger-nav {
+    display: none;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 760px) {
+    nav{
+        justify-content: end;
+    }
+
+    .logo-vide{
+        width: 20px;
+    }
+
+    #navbar ul {
+        display: none;
+    }
+
+    header ul li{
+        border-width: 0px;
+    }
+
+    .burger-menu {
+        display: block;
+        font-size: 30px;
+        width: 50px;
+        background: aqua;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .burger-nav {
+        display: none;
+        flex-direction: column;
+    }
+
+    .burger-nav a {
+        border-bottom: 1px solid #41e8d2; /* Ajoute une bordure en bas de chaque onglet */
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsive page d'accueil */
+
+@media screen and (max-width: 1800px) and (min-width: 1600px) {
+    .content-droite img {
+        object-position: 50px 60px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .content-droite img {
+        object-position: 50px 60px;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .content-droite{
+        display: none;
+    }
+
+    .content-gauche{
+        width: 100%;
+        border: #41e8d2;
+        border-style: solid;
+        border-width: 0px 0px 50px 0px;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .bouton-inscription{
+        width: 90%;
+        padding: 50px 15px;
+    }
+
+    .nav-footer{
+        flex-direction: column-reverse;
+    }
+    
+    .contactez-nous{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 800px) {
+    .content{
+        margin: 50px;
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    .content{
+        margin: 0px;
+        margin-top: -5px;
+        margin-bottom: 20px;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    .footer-logo img{
+        width: 110px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .footer-logo img{
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .footer-logo img{
+        width: 50px;
+    }
+}
+
+/* Responsive page staff */
+
+@media screen and (max-width: 500px){
+    .direction .membres{
+        flex-direction: column;
+    }
+
+    .direction .membres li{
+        width: 100%;
+    }
+
+    .equipe .membres{
+        flex-direction: column;
+    }
+
+    .equipe .membres li{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px){
+    .direction .membres{
+        flex-direction: column;
+    }
+
+    .direction .membres li{
+        width: 460px;
+    }
+
+    .equipe .membres{
+        flex-direction: column;
+    }
+
+    .equipe .membres li{
+        width: 460px;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px){
+    .direction .membres{
+        flex-direction: column;
+    }
+
+    .direction .membres li{
+        width: 50%;
+    }
+
+    .equipe .membres{
+        flex-direction: column;
+    }
+
+    .equipe .membres li{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1400px){
+    .direction .membres{
+        flex-direction: row;
+    }
+
+    .direction .membres li{
+        width: 35.5%;
+    }
+
+    .equipe .membres{
+        flex-direction: row;
+    }
+
+    .equipe .membres li{
+        width: 35.5%;
+    }
+}
+
+/* Responsive page contact */
+
+@media screen and (max-width: 1300px) and (min-width: 1000px) {
+    form {
+        width: 70%;
+    }
+
+    .form-contact p {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .content-contact {
+        flex-direction: column;
+    }
+
+    .form-contact {
+        width: 80%;
+    }
+
+    form {
+        width: 80%;
+    }
+
+    .form-contact p {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .form-contact {
+        width: 70%;
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    .form-contact {
+        width: 100%;
+    }
 }

@@ -1,0 +1,16 @@
+<!-- home.ejs (ou toute autre page ejs) -->
+<%- include('partials/head') %> <!-- Inclure le header -->
+
+<body>
+    <%- include('partials/header') %> <!-- Inclure le header -->
+    
+    <h1>Live</h1>
+
+    <div id="twitch-embed">
+    </div>
+
+    <script src="/scripts/twitch.js" type="text/javascript"></script>
+    
+    <%- include('partials/footer') %> <!-- Inclure le footer -->
+</body>
+</html>
